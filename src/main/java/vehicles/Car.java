@@ -20,7 +20,6 @@ public class Car implements Visitable {
 		// TODO Auto-generated method stub
 		return visitor.visit(this);
 	}
-
 }
 
 

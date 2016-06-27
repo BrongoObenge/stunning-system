@@ -5,7 +5,6 @@ public class BusinessPackage extends OptionsConfigurator{
 	public BusinessPackage(NewCar newNewCar) {
 		super(newNewCar);
 		System.out.println("My Audi");
-		
 		System.out.println("Added with the business package");
 	}
 	

@@ -1,6 +1,6 @@
 package factory;
 
-public abstract class AudiType {
+public abstract class AudiType implements Audi{
 	private String model;
 	private String engine;	
 	private String color;
@@ -26,15 +26,19 @@ public abstract class AudiType {
 		color = newColor;
 	}
 	
-	public void paintCar(){
-		System.out.println(getColor()+ "is your new color on your audi");
+	public String paintCar(){
+		return getColor()+ "is your new color on your audi";
 	}
-	public void showModel(){
-		System.out.println("Your new audi is the model: " + getModel());
-	}
-	
-	public void showEngine(){
-		System.out.println("Your Audi " + getModel()+ "has a "+ getEngine() + "engine");
+	public String showModel(){
+		return "Your new audi is the model: " + getModel();
 	}
 	
+	public String showEngine(){
+		return "Your Audi " + getModel()+ "has a "+ getEngine() + "engine";
+	}
+
+	public String getDescription(){
+		return "Your Audi "+getModel() + " is " + getColor() + " and has a " + getEngine() + " engine";
+	}
+
 }
