@@ -90,12 +90,12 @@ public class Frame extends JFrame {
                         CoolAndHipIterator<Audi> aArrayIterator = aArray.getIterator();
                         CoolAndHipIterator<Audi> aMapIterator = aMap.getIterator();
 
-                        int index = 0;
+                        int index = 1;
 
                         System.out.println("\n==ListIterator==");
                         while(aListIterator.hasNext()){
                             a = aListIterator.getCurrent().get();
-                            textarea.append(index+ "| " +a.getDescription()+"\n");
+                            textarea.append(index+ "|LIST| " +a.getDescription()+"\n");
                             aListIterator.moveNext();
                             index++;
                         };
@@ -103,14 +103,14 @@ public class Frame extends JFrame {
                         System.out.println("\n==ArrayIterator==");
                         while(aArrayIterator.hasNext()){
                             a = aArrayIterator.getCurrent().get();
-                            textarea.append(index+ "| " +a.getDescription()+"\n");
+                            textarea.append(index+ "|ARR| " +a.getDescription()+"\n");
                             aArrayIterator.moveNext();
                             index++;
                         };
                         System.out.println("\n==MapIterator==");
                         while(aMapIterator.hasNext()){
                             a = aMapIterator.getCurrent().get();
-                            textarea.append(index+ "| " +a.getDescription()+"\n");
+                            textarea.append(index+ "|MAP| " +a.getDescription()+"\n");
                             aMapIterator.moveNext();
                             index++;
                         };

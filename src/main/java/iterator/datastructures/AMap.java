@@ -14,21 +14,21 @@ public class AMap<K, V> implements CoolAndHipIterator<V>{
 
     @Override
     public Optional<V> getCurrent() {
-        if (current < map.size()){
-            Set<K> key = map.keySet();
-            K[] arr = (K[])key.toArray();
-            K currentKey = arr[current];
-            V currentObj = map.get(currentKey);
-            if(currentObj != null) {
-                return Optional.of(currentObj);
-            }
+        Set<K> key = map.keySet();
+        K[] arr = (K[])key.toArray();
+        K currentKey = arr[current];
+        V currentObj = map.get(currentKey);
+        if(currentObj != null) {
+            return Optional.of(currentObj);
         }
         return Optional.empty();
     }
 
+
+
     @Override
     public boolean hasNext() {
-        if(current <= map.size()-1){return true;}
+        if(current < map.size()){return true;}
         return false;
     }
 
