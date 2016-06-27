@@ -1,5 +1,6 @@
 package main;
 
+import adapter.*;
 import decorator.BusinessPackage;
 import decorator.NewCar;
 import decorator.PlainCar;
@@ -69,6 +70,11 @@ public class Frame extends JFrame {
                 jPanelwest.add(giveCars);
 
 
+                JButton adapterTest = new JButton("See who moves faster");
+
+
+
+
                 JButton carsound = new JButton("Car sound");
                 jpanelNorth.add(carsound);
                 JButton boatsound = new JButton("Boat sound");
@@ -79,6 +85,24 @@ public class Frame extends JFrame {
                 jpanelSouth.add(sportPackage);
                 JButton SportAndBusinessPackage = new JButton("Car with sports+businesspackage");
                 jpanelSouth.add(SportAndBusinessPackage);
+                jpanelSouth.add(adapterTest);
+
+                adapterTest.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        AList<Movable> movableList = new AList<Movable>();
+                        movableList.add(new Human());
+                        movableList.add(new Animal());
+                        movableList.add(new VehicleAdapter(new JetFighter()));
+                        textarea.append("==Movables==\n");
+                        CoolAndHipIterator<Movable> a = movableList.getIterator();
+                        while(a.hasNext()){
+                            textarea.append(a.getCurrent().get().moveForward()+"\n");
+                            a.moveNext();
+                        }
+                    }
+                });
+
 
                 giveCars.addActionListener(new ActionListener(){
 

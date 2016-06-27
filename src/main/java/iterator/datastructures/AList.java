@@ -1,6 +1,7 @@
 package iterator.datastructures;
 
 import iterator.CoolAndHipIterator;
+import iterator.NewerCoolAndHipIteratorAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

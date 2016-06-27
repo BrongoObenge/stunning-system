@@ -1,13 +1,14 @@
 package iterator.datastructures;
 
 import iterator.CoolAndHipIterator;
+import iterator.NewerCoolAndHipIteratorAdapter;
 
 import java.util.*;
 
 /**
  * Created by j on 6/27/16.
  */
-public class AMap<K, V> implements CoolAndHipIterator<V>{
+public class AMap<K, V> implements CoolAndHipIterator<V> {
 
     private Map<K, V> map = new LinkedHashMap<K, V>();
     private int current = 0;

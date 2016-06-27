@@ -1,13 +1,14 @@
 package iterator.datastructures;
 
 import iterator.CoolAndHipIterator;
+import iterator.NewerCoolAndHipIteratorAdapter;
 
 import java.util.*;
 
 /**
  * Created by j on 6/27/16.
  */
-public class AArray<T> implements CoolAndHipIterator<T>{
+public class AArray<T> implements CoolAndHipIterator<T> {
 
     private T[] arr;
     int current = 0;
@@ -51,5 +52,4 @@ public class AArray<T> implements CoolAndHipIterator<T>{
 
         arr = temp.toArray(array);
     }
-
 }
